@@ -12,6 +12,8 @@ EXPOSE 8080
 ARG DEV=false
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
+    apk add --no-cache git gnupg openssh ansible \
+    gcc musl-dev gettext mariadb-client mariadb-dev && \        
     /py/bin/pip install -r /tmp/requirements.txt && \
     if [ $DEV = "true" ]; \
         then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
