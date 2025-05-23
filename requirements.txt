@@ -1,4 +1,7 @@
 black==24.3.0
 Django>=3.2.4,<3.3
+django-extensions==3.2.3
+django-cryptography==1.1
 djangorestframework>=3.12.4,<3.13
+factory-boy==3.3.0
 mysqlclient==2.2.0
