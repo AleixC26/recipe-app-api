@@ -2,10 +2,7 @@
 Database models
 """
 
-from django.contrib.auth.models import (
-    AbstractUser,
-    BaseUserManager
-)
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django_cryptography.fields import encrypt
 from django_extensions.db.models import TimeStampedModel
 

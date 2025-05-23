@@ -1,6 +1,7 @@
 """
 Test for models
 """
+
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 
@@ -24,10 +25,10 @@ class UserTest(TestCase):
     def test_new_user_email_normalized(self):
         """Test email is normalized for new users"""
         sample_email = [
-            ['test1@EXAMPLE.com', 'test1@example.com'],
-            ['Test2@Example.com', 'Test2@example.com'],
-            ['TEST3@EXAMPLE.com', 'TEST3@example.com'],
-            ['test4@example.COM', 'test4@example.com']
+            ["test1@EXAMPLE.com", "test1@example.com"],
+            ["Test2@Example.com", "Test2@example.com"],
+            ["TEST3@EXAMPLE.com", "TEST3@example.com"],
+            ["test4@example.COM", "test4@example.com"],
         ]
 
         for email, expected in sample_email:
