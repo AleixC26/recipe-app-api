@@ -3,7 +3,6 @@ Database models
 """
 
 from django.contrib.auth.models import AbstractUser, BaseUserManager
-from django_cryptography.fields import encrypt
 from django_extensions.db.models import TimeStampedModel
 from django.db import models
 
@@ -34,8 +33,6 @@ class UserManager(BaseUserManager):
 class User(AbstractUser, TimeStampedModel):
     """User in the system"""
 
-    first_name = encrypt(AbstractUser._meta.get_field("first_name"))
-    last_name = encrypt(AbstractUser._meta.get_field("last_name"))
     email = models.EmailField(blank=True, unique=True)
 
     objects = UserManager()
